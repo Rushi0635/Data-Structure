@@ -2,18 +2,18 @@
 
 int main()
 {
-    int a[20], n, i, pos, item, ch, found;
+    int a[20], size, i, pos, item, ch, found;
 
     printf("Enter number of elements: ");
-    scanf("%d", &n);
+    scanf("%d", &size);
 
     printf("Enter array elements:\n");
-    for(i = 0; i < n; i++)
+    for(i = 0; i < size; i++)
         scanf("%d", &a[i]);
 
     do
     {
-        printf("\n\n----- MENU -----");
+        printf("\n\n----- Array Operations -----");
         printf("\n1. Traversal");
         printf("\n2. Insertion");
         printf("\n3. Deletion");
@@ -26,12 +26,12 @@ int main()
         {
             case 1:
                 printf("Array: ");
-                for(i = 0; i < n; i++)
+                for(i = 0; i < size; i++)
                     printf("%d ", a[i]);
                 break;
 
             case 2:
-                if(n == 20)
+                if(size == 20)
                 {
                     printf("Array is full.");
                 }
@@ -40,17 +40,17 @@ int main()
                     printf("Enter position and value: ");
                     scanf("%d%d", &pos, &item);
 
-                    if(pos < 1 || pos > n + 1)
+                    if(pos < 1 || pos > size + 1)
                     {
                         printf("Invalid position.");
                     }
                     else
                     {
-                        for(i = n; i >= pos; i--)
+                        for(i = size; i >= pos; i--)
                             a[i] = a[i - 1];
 
                         a[pos - 1] = item;
-                        n++;
+                        size++;
 
                         printf("Element inserted.");
                     }
@@ -58,7 +58,7 @@ int main()
                 break;
 
             case 3:
-                if(n == 0)
+                if(size == 0)
                 {
                     printf("Array is empty.");
                 }
@@ -67,16 +67,16 @@ int main()
                     printf("Enter position to delete: ");
                     scanf("%d", &pos);
 
-                    if(pos < 1 || pos > n)
+                    if(pos < 1 || pos > size)
                     {
                         printf("Invalid position.");
                     }
                     else
                     {
-                        for(i = pos - 1; i < n - 1; i++)
+                        for(i = pos - 1; i < size - 1; i++)
                             a[i] = a[i + 1];
 
-                        n--;
+                        size--;
 
                         printf("Element deleted.");
                     }
@@ -87,7 +87,7 @@ int main()
                     printf("Enter element to search: ");
                     scanf("%d", &item);
 
-                    for(i = 0; i < n; i++)
+                    for(i = 0; i < size; i++)
                     {
                         if(a[i] == item)
                         {
@@ -96,7 +96,7 @@ int main()
                         }
                     }
 
-                    if(i == n)
+                    if(i == size)
                     {
                         printf("Element not found.");
                     }
