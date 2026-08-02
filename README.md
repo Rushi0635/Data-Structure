@@ -39,7 +39,7 @@ Searches for a given element in the array and displays its position if found.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repository-name.git
+   git clone https://github.com/Rushi0635/ds.git
    ```
 
 2. Navigate to the project folder:
