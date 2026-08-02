@@ -2,7 +2,7 @@
 
 int main()
 {
-    int a[20], size, i, pos, item, ch, found;
+    int a[20], size, i, pos, elem, ch;
 
     printf("Enter number of elements: ");
     scanf("%d", &size);
@@ -37,8 +37,11 @@ int main()
                 }
                 else
                 {
-                    printf("Enter position and value: ");
-                    scanf("%d%d", &pos, &item);
+                    printf("Enter position to insert: ");
+                    scanf("%d", &pos);
+
+                    printf("Enter element to insert: ");
+                    scanf("%d", &elem);
 
                     if(pos < 1 || pos > size + 1)
                     {
@@ -49,7 +52,7 @@ int main()
                         for(i = size; i >= pos; i--)
                             a[i] = a[i - 1];
 
-                        a[pos - 1] = item;
+                        a[pos - 1] = elem;
                         size++;
 
                         printf("Element inserted.");
@@ -85,11 +88,11 @@ int main()
 
             case 4:
                     printf("Enter element to search: ");
-                    scanf("%d", &item);
+                    scanf("%d", &elem);
 
                     for(i = 0; i < size; i++)
                     {
-                        if(a[i] == item)
+                        if(a[i] == elem)
                         {
                             printf("Element found at position %d", i + 1);
                             break;
