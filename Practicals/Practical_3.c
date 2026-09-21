@@ -5,7 +5,6 @@
 int stack[MAX];
 int top = -1;
 
-// Push operation
 void push()
 {
     int value;
@@ -26,7 +25,6 @@ void push()
     }
 }
 
-// Pop operation
 void pop()
 {
     if (top == -1)
@@ -40,7 +38,6 @@ void pop()
     }
 }
 
-// Peek operation
 void peek()
 {
     if (top == -1)
@@ -53,7 +50,6 @@ void peek()
     }
 }
 
-// Display operation
 void display()
 {
     int i;
@@ -79,7 +75,7 @@ int main()
 
     do
     {
-        printf("\n--- STACK MENU ---\n");
+        printf("\n--- STACK OPERATIONS ---\n");
         printf("1. Push\n");
         printf("2. Pop\n");
         printf("3. Peek\n");
